@@ -1,0 +1,44 @@
+<!-- login.component.html -->
+<nav class="navbar">
+  <a href="https://www.gruposp.com.ar/" class="back-link">
+    <i class="pi pi-arrow-left"></i>
+  </a>
+  <span class="navbar-title">Grupo SP</span>
+</nav>
+
+<div class="container">
+  <div class="left-column">
+    <!-- Puede que quieras agregar algo aquí -->
+  </div>
+
+  <div class="right-column">
+    <div class="login-wrapper">
+      <div class="login-card">
+        <div class="login-header">
+          <h2>Iniciar sesión</h2>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <div class="p-fluid">
+            <div class="p-field p-input-icon-left">
+              <i class="pi pi-user"></i>
+              <input id="username" type="text" pInputText formControlName="username" placeholder="Usuario" />
+            </div>
+
+            <div class="p-field p-input-icon-left">
+              <i class="pi pi-lock"></i>
+              <input id="password" type="password" pInputText formControlName="password" placeholder="Contraseña" />
+            </div>
+
+            <div class="forgot-password">
+              <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <button pButton type="submit" label="Entrar" class="login-button"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

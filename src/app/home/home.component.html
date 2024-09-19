@@ -1,0 +1,63 @@
+<nav class="navbar">
+  <span class="navbar-title">Grupo SP</span>
+
+  <!-- Botón de perfil / Opciones de usuario -->
+  <div class="navbar-profile">
+    <i class="pi pi-user" (click)="toggleUserMenu()"></i>
+    <ul *ngIf="isUserMenuVisible" class="profile-menu">
+      <li (click)="logout()">Cerrar sesión</li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Mostrar solo si es admin o VIP -->
+<div *ngIf="authService.isAdmin() || authService.isEmp()">
+  <div class="form-container">
+    <p-card header="Crear Usuario" class="p-shadow-4 custom-card">
+      <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="p-fluid">
+        <div class="p-field p-grid">
+          <label for="username" class="p-col-12 p-md-2">Nombre de Usuario</label>
+          <div class="p-col-12 p-md-10">
+            <input id="username" type="text" pInputText name="username" [(ngModel)]="user.username" required />
+          </div>
+        </div>
+
+        <div class="p-field p-grid">
+          <label for="email" class="p-col-12 p-md-2">Correo Electrónico</label>
+          <div class="p-col-12 p-md-10">
+            <input id="email" type="email" pInputText name="email" [(ngModel)]="user.email" required />
+          </div>
+        </div>
+
+        <div class="p-field p-grid">
+          <label for="password" class="p-col-12 p-md-2">Contraseña</label>
+          <div class="p-col-12 p-md-10">
+            <input id="password" type="password" pInputText name="password" [(ngModel)]="user.password" required />
+          </div>
+        </div>
+
+        <div class="p-field p-grid">
+          <label for="role" class="p-col-12 p-md-2">Rol</label>
+          <div class="p-col-12 p-md-10">
+            <select id="role" name="role" [(ngModel)]="user.role" class="custom-select" required>
+              <option value="" disabled selected>Seleccione un rol</option>
+              <option *ngFor="let role of roles" [value]="role.value">{{ role.label }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="p-mt-4 p-d-flex p-jc-end">
+          <button pButton type="submit" label="Crear Usuario" class="p-button-rounded p-button-success" [disabled]="!userForm.form.valid"></button>
+        </div>
+      </form>
+    </p-card>
+  </div>
+
+</div>
+
+<!-- Mostrar ofertas si es distribuidor -->
+<div *ngIf="authService.isDistributor()">
+  <h1>Lista de precios y ofertas...</h1>
+</div>
+
+

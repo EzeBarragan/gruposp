@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <span class="navbar-title">Grupo SP</span>
+
+  <!-- Botón de perfil / Opciones de usuario -->
+  <div class="navbar-profile">
+    <i class="pi pi-user" (click)="toggleUserMenu()"></i>
+    <ul *ngIf="isUserMenuVisible" class="profile-menu">
+      <li (click)="logout()">Cerrar sesión</li>
+    </ul>
+  </div>
+</nav>
+<!-- offers.component.html -->
+<div class="offers-container">
+  <h2>Ofertas y Lista de Precios</h2>
+  <!-- Agrega aquí la lógica y contenido para mostrar ofertas -->
+</div>

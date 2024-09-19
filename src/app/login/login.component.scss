@@ -1,0 +1,139 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0078D7;
+  padding: 1rem;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.back-link {
+  margin-left: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+/* Container for two columns */
+.container {
+  display: flex;
+  height: 100vh;
+  padding-top: 60px; /* Space for navbar */
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+    background-image: url('../../assets/Logotipo-VERDE-01.png');
+    background-size: cover; /* Ajusta la imagen para cubrir el elemento */
+    background-position: center; /* Centra la imagen */
+    width: auto; /* Ajusta el ancho si es necesario */
+    height: auto; /* Ajusta la altura si es necesario */
+
+
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+
+/* Login Styles */
+.login-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+}
+
+.login-header h2 {
+  margin: 0;
+  color: #0078D7;
+  font-weight: bold;
+}
+
+.p-field {
+  margin-bottom: 1.5rem;
+}
+
+.p-input-icon-left .pi {
+  color: #888;
+}
+
+.p-input-icon-left input {
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  height: 3rem; /* Make inputs bigger */
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.forgot-password a {
+  font-size: 0.9rem;
+  color: #0078D7;
+}
+
+/* Button Styles */
+.login-button {
+  width: 100%;
+  background: linear-gradient(0deg, #224B49, #51B1AB);
+  border: none;
+  color: white;
+  padding: 1rem; /* Bigger button */
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:hover {
+  background: linear-gradient(0deg, #1b3938, #46978d);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Welcome message */
+.welcome-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f8;
+}
+
+.welcome-message h1 {
+  color: #0078D7;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
